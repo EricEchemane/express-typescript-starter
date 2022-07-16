@@ -14,7 +14,8 @@
   "scripts": {
     "dev": "nodemon .",
     "start": "node .",
-    "build": "tsc && resolve-tspaths"
+    "build": "tsc && resolve-tspaths",
+    "bs": "tsc && resolve-tspaths && node ."
   },
   "dependencies": {
     "@prisma/client": "^4.0.0",
