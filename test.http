@@ -8,3 +8,7 @@ Content-Type: application/json
     "username": "cire",
     "password": "admin123"
 }
+###
+get http://localhost:2900/user/eechemane29@gmail.com
+###
+delete http://localhost:2900/user/cl5nx4b8z00007d0fypbrv43kd

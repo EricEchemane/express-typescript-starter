@@ -8,7 +8,7 @@ export interface UserSchema {
 }
 
 export default class Users {
-    static selectAll = async () => {
+    static findAll = async () => {
         const users = await prisma.user.findMany({
             select: { email: true, username: true, id: true }
         });
@@ -26,5 +26,28 @@ export default class Users {
             }
         });
         return upsertedUser;
+    };
+
+    static findUnique = async (filter: { email: string; }) => {
+        const user = await prisma.user.findUnique({
+            where: filter,
+            select: {
+                username: true,
+                email: true,
+                id: true
+            }
+        });
+        return user;
+    };
+
+    static deleteOne = async (filter: { id: string; }) => {
+        try {
+            const deleted = await prisma.user.delete({
+                where: filter
+            });
+            return deleted;
+        } catch (error) {
+            return null;
+        }
     };
 }
