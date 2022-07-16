@@ -1,8 +1,8 @@
 import type { Response } from "express";
 import express from 'express';
 import dotenv from "dotenv";
-import environment from 'constants/environment';
-import prisma from 'prisma/client';
+import prisma from "prisma/client";
+import environment from "constants/environment";
 dotenv.config();
 
 const app = express();

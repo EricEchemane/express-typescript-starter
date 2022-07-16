@@ -1,35 +1,34 @@
 {
     "compilerOptions": {
         "module": "CommonJS",
-        "target": "ES3",
+        "target": "ES6",
         "esModuleInterop": true,
         "noImplicitAny": true,
         "moduleResolution": "node",
         "outDir": "dist",
-        "baseUrl": ".",
+        "baseUrl": "src",
         "paths": {
             "prisma/*": [
                 "prisma/*"
             ],
             "constants/*": [
-                "src/constants/*"
+                "constants/*"
             ],
             "controllers/*": [
-                "src/controllers/*"
+                "controllers/*"
             ],
             "db/*": [
-                "src/db/*"
+                "db/*"
             ],
             "middlewares/*": [
-                "src/middlewares/*"
+                "middlewares/*"
             ],
             "routes/*": [
-                "src/routes/*"
+                "routes/*"
             ]
         }
     },
     "include": [
-        "src",
-        "prisma"
+        "src"
     ]
 }
