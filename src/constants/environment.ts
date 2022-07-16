@@ -5,7 +5,7 @@ export default class Environment {
     }
 
     static port(): any {
-        if (this.isDevMode()) return 3000;
+        if (this.isDevMode()) return 2900;
         return process.env.PORT;
     }
 }
