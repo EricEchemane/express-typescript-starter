@@ -1,11 +1,14 @@
-export default class Environment {
-    static isDevMode(): boolean {
-        const env = process.env.NODE_ENV || "development";
-        return env === "development";
-    }
+class Environment {
+    isDevMode: boolean;
+    port: number | string;
 
-    static port(): any {
-        if (this.isDevMode()) return 2900;
-        return process.env.PORT;
+    constructor() {
+        const env = process.env.NODE_ENV || "development";
+        this.isDevMode = env === "development";
+        this.port = this.isDevMode ? 2900 : process.env.PORT;
     }
 }
+
+const environment = new Environment();
+
+export default environment;
