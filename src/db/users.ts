@@ -9,7 +9,9 @@ export interface UserSchema {
 
 export default class Users {
     static selectAll = async () => {
-        const users: UserSchema[] = await prisma.user.findMany();
+        const users = await prisma.user.findMany({
+            select: { email: true, username: true, id: true }
+        });
         return users;
     };
 
