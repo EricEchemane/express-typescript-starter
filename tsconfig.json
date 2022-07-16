@@ -14,12 +14,15 @@
             "controllers/*": [
                 "src/controllers/*"
             ],
+            "db/*": [
+                "src/db/*"
+            ],
             "middlewares/*": [
                 "src/middlewares/*"
             ],
             "routes/*": [
                 "src/routes/*"
-            ],
+            ]
         }
     },
     "include": [
