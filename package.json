@@ -15,7 +15,7 @@
   },
   "scripts": {
     "dev": "nodemon .",
-    "start": "tsc && resolve-tspaths && node .",
+    "start": "node -r tsconfig-paths/register -r ts-node/register ./src/index.ts",
     "build": "tsc && resolve-tspaths"
   },
   "dependencies": {

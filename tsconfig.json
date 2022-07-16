@@ -8,6 +8,9 @@
         "outDir": "dist",
         "baseUrl": ".",
         "paths": {
+            "prisma/*": [
+                "prisma/*"
+            ],
             "constants/*": [
                 "src/constants/*"
             ],
@@ -26,6 +29,7 @@
         }
     },
     "include": [
-        "src"
+        "src",
+        "prisma"
     ]
 }
