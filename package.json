@@ -12,7 +12,7 @@
   },
   "scripts": {
     "dev": "nodemon .",
-    "start": "tsc && resolve-tspaths && node .",
+    "start": "node .",
     "build": "tsc && resolve-tspaths"
   },
   "dependencies": {
