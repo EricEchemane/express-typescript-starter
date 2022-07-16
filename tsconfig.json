@@ -5,19 +5,15 @@
         "esModuleInterop": true,
         "noImplicitAny": true,
         "moduleResolution": "node",
-        "sourceMap": true,
         "outDir": "dist",
         "baseUrl": ".",
         "paths": {
-            "*": [
-                "node_modules/*"
-            ],
-            "constants": [
+            "constants/*": [
                 "src/constants/*"
             ]
-        },
+        }
     },
     "include": [
-        "src/**/*"
+        "src"
     ]
 }
