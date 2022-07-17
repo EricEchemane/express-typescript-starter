@@ -8,9 +8,6 @@
         "outDir": "dist",
         "baseUrl": "src",
         "paths": {
-            "prisma/*": [
-                "prisma/*"
-            ],
             "constants/*": [
                 "constants/*"
             ],
@@ -22,6 +19,9 @@
             ],
             "middlewares/*": [
                 "middlewares/*"
+            ],
+            "prisma/*": [
+                "prisma/*"
             ],
             "routes/*": [
                 "routes/*"

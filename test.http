@@ -4,11 +4,11 @@ post http://localhost:2900/users
 Content-Type: application/json
 
 {
-    "email": "eechemane29@gmail.com",
+    "email": "echemanee@gmail.com",
     "username": "cire",
     "password": "admin123"
 }
 ###
 get http://localhost:2900/user/eechemane29@gmail.com
 ###
-delete http://localhost:2900/user/cl5nx4b8z00007d0fypbrv43kd
+delete http://localhost:2900/user/cl5okhnd40002a0fy1szwtu4z

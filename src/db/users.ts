@@ -41,13 +41,9 @@ export default class Users {
     };
 
     static deleteOne = async (filter: { id: string; }) => {
-        try {
-            const deleted = await prisma.user.delete({
-                where: filter
-            });
-            return deleted;
-        } catch (error) {
-            return null;
-        }
+        const deleted = await prisma.user.delete({
+            where: filter
+        });
+        return deleted;
     };
 }
