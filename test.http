@@ -1,4 +1,6 @@
 get http://localhost:2900/users
+Authorization: Bearer asd
+
 ###
 post http://localhost:2900/users
 Content-Type: application/json

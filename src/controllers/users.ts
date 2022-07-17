@@ -1,7 +1,8 @@
 import Users from "db/users";
 import type { Request, Response } from "express";
+import { NewRequest } from "middlewares/auth";
 
-export async function getUsers(req: Request, res: Response) {
+export async function getUsers(req: NewRequest, res: Response) {
     const users = await Users.findAll();
     res.status(200).json({ users });
 }
