@@ -6,4 +6,8 @@ export default class JWT {
         const token = jwt.sign(payload, environment.secret);
         return token;
     };
+
+    static verify = (token: string) => {
+        return jwt.verify(token, environment.secret);
+    };
 }

@@ -1,5 +1,5 @@
 get http://localhost:2900/users
-Authorization: Bearer asd
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.ZWNoZW1hbmVlQGdtYWlsLmNvbQ.cVQNplLPzIbOtic6B2gj_Kro2ccY67TGtvhIfJ-YZl4
 
 ###
 post http://localhost:2900/users

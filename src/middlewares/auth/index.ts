@@ -1,3 +1,4 @@
+import JWT from "constants/jwt";
 import type { NextFunction, Request, Response } from "express";
 
 export interface NewRequest extends Request {
@@ -19,7 +20,7 @@ export default function authorization(req: NewRequest, res: Response, next: Next
     if (!token) {
         return res.status(401).end();
     }
-    // do jwt verify logic
-    req.user = token; // if verify is successful
+    const user = JWT.verify(token);
+    req.user = user;
     next();
 }
