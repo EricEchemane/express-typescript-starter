@@ -1,3 +1,4 @@
+import Hasher from "constants/hasher";
 import Users from "db/users";
 import type { Request, Response } from "express";
 import { NewRequest } from "middlewares/auth";
@@ -23,7 +24,8 @@ export async function createUser(req: Request, res: Response) {
         res.status(400).end();
         return;
     }
-    const newUSer = await Users.create(req.body);
+    const tempUser = { username, email, password: Hasher.hash(password) };
+    const newUSer = await Users.create(tempUser);
     res.status(200).json({ newUSer });
 }
 

@@ -4,6 +4,7 @@ Authorization: Bearer asd
 ###
 post http://localhost:2900/users
 Content-Type: application/json
+Authorization: Bearer asd
 
 {
     "email": "echemanee@gmail.com",
@@ -14,7 +15,8 @@ Content-Type: application/json
 get http://localhost:2900/user/eechemane29@gmail.com
 Authorization: Bearer asd
 ###
-delete http://localhost:2900/user/cl5okhnd40002a0fy1szwtu4z
+delete http://localhost:2900/user/cl5olx73w0061h4fy73ooetwo
+Authorization: Bearer asd
 ###
 post http://localhost:2900/login
 Content-Type: application/json

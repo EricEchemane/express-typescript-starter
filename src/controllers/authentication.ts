@@ -1,3 +1,4 @@
+import Hasher from "constants/hasher";
 import JWT from "constants/jwt";
 import Users, { Credential } from "db/users";
 import type { Response, Request } from "express";
@@ -9,7 +10,7 @@ export async function login(req: Request, res: Response) {
     }
 
     const userExist = await Users.findUnique({ email }, false);
-    if (userExist && userExist.password === password) {
+    if (userExist && Hasher.verify(password, userExist.password)) {
         const token = JWT.sign(email);
         res.json({ token });
     }
