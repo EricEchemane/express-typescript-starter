@@ -12,5 +12,14 @@ Content-Type: application/json
 }
 ###
 get http://localhost:2900/user/eechemane29@gmail.com
+Authorization: Bearer asd
 ###
 delete http://localhost:2900/user/cl5okhnd40002a0fy1szwtu4z
+###
+post http://localhost:2900/login
+Content-Type: application/json
+
+{
+    "email": "echemanee@gmail.com",
+    "password": "admin123"
+}

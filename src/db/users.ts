@@ -7,6 +7,11 @@ export interface UserSchema {
     email: string;
 }
 
+export interface Credential {
+    email: string;
+    password: string;
+}
+
 export default class Users {
     static findAll = async () => {
         const users = await prisma.user.findMany({
@@ -28,13 +33,14 @@ export default class Users {
         return upsertedUser;
     };
 
-    static findUnique = async (filter: { email: string; }) => {
+    static findUnique = async (filter: { email: string; }, omitPassword = true) => {
         const user = await prisma.user.findUnique({
             where: filter,
             select: {
                 username: true,
                 email: true,
-                id: true
+                id: true,
+                password: !omitPassword
             }
         });
         return user;
