@@ -8,7 +8,7 @@ import usersRoute from "routes/users";
 import { errorLogger } from 'middlewares/error/handlers';
 import authorization from 'middlewares/auth';
 import authenticationRoute from 'routes/authentication';
-import { socketConnectionHandler } from 'controllers/socket';
+import { socketConnectionHandler } from 'socket/socket';
 
 const app = express();
 
