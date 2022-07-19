@@ -5,9 +5,16 @@ export interface NewRequest extends Request {
     user: any;
 }
 
+const ignoredRoutes = new Map([
+    ['/login', true],
+    ['/login/', true],
+    ['/', true],
+]);
+
 export default function authorization(req: NewRequest, res: Response, next: NextFunction) {
 
-    if (req.path === '/login') {
+    // ignores the current route if the route is in the ignoredRoutes
+    if (ignoredRoutes.has(req.path)) {
         next();
         return;
     }
