@@ -4,7 +4,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.ZWNoZW1hbmVlQGdtYWlsLmNvbQ.cVQNplLPzI
 ###
 post http://localhost:2900/users
 Content-Type: application/json
-Authorization: Bearer asd
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.ZWNoZW1hbmVlQGdtYWlsLmNvbQ.cVQNplLPzIbOtic6B2gj_Kro2ccY67TGtvhIfJ-YZl4
 
 {
     "email": "echemanee@gmail.com",
@@ -16,7 +16,7 @@ get http://localhost:2900/user/eechemane29@gmail.com
 Authorization: Bearer asd
 ###
 delete http://localhost:2900/user/cl5olx73w0061h4fy73ooetwo
-Authorization: Bearer asd
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.ZWNoZW1hbmVlQGdtYWlsLmNvbQ.cVQNplLPzIbOtic6B2gj_Kro2ccY67TGtvhIfJ-YZl4
 ###
 post http://localhost:2900/login
 Content-Type: application/json

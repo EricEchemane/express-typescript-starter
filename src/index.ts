@@ -24,7 +24,7 @@ app.use(authorization);
 app.use(authenticationRoute);
 app.use(usersRoute);
 
-app.get('/', (req, res) => {
+app.get('/', (_, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
@@ -32,8 +32,9 @@ const server = http.createServer(app);
 
 // socket.io setup
 const io = new Server(server);
-io.on('connection', socketConnectionHandler);
+const socketConnection = io.on('connection', socketConnectionHandler);
+app.set('socketConnection', socketConnection);
 
 server.listen(environment.port, () => {
-    console.log(`Running on port ${environment.port}`);
+    console.log(`Running on http://localhost:${environment.port}`);
 });
